@@ -16,3 +16,6 @@ public class HelloWorldResource {   // this is a JAX-RS resource = annotated POJ
 }
 
 // "helloWorld" is a resource URI
+
+
+// POSTMAN call: http://localhost:8080/RESTful_web_services_project/services/helloWorld

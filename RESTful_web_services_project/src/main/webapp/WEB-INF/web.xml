@@ -6,12 +6,29 @@
     </welcome-file-list>
 
     <!--configure web.xml to the bound Jersey Container with the resources packages-->
-    <servlet>
+    <!-- Deploying a RESTful web service without using Application class -->
+    <!--<servlet>
         <servlet-name>Simple Jersey Example</servlet-name>
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
             <param-value>com.demo</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Simple Jersey Example</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>-->
+
+    <!-- Deploying a RESTful web service using Application class or using ResourceConfig class -->
+    <servlet>
+        <servlet-name>Simple Jersey Example</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>com.demo.MainApplication</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
