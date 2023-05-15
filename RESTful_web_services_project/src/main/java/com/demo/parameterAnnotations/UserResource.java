@@ -115,6 +115,17 @@ public class UserResource {
                 .entity("User was created successfully: " + firstName + " " + fullName + " " + email + " " + password)
                 .build();
     }
+
+    @GET
+    @Path("/getUserList")
+    @Produces({"application/xml"})
+    public User[] getList() {
+        User[] list = new User[3];
+        list[0] = new User("John");
+        list[1] = new User("William");
+        list[2] = new User("Suzzane");
+        return list;
+    }
 }
 
 // @PathParam("name") = is used to bind the value of the 'name' path parameter to the 'name' parameter of the getUserByName() method

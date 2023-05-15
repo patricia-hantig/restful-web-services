@@ -1,9 +1,6 @@
 package com.demo.httpMethods;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
 // example of a root-resource class for GET method
@@ -17,6 +14,7 @@ public class GetResource {
         return "Hello User";
     }
 
+    // using Path param
     @GET
     @Path("{id}")
     public Response getResourceById(@PathParam("id") int id) {
