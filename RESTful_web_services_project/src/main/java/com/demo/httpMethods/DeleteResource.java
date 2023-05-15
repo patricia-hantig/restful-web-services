@@ -14,8 +14,9 @@ public class DeleteResource {
     // method 1
     @DELETE
     @Path("{name}")
-    public void delete(@PathParam("name") String name) {
+    public String delete(@PathParam("name") String name) {
         System.out.println("DELETE: " + name);
+        return "Delete " + name;
     }
 
     // method 2

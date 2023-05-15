@@ -11,9 +11,10 @@ public class PutResource {
     // method 1
     @PUT
     @Path("/simpleExample")
-    public void updateUser(String userData) {
+    public String updateUser(String userData) {
         System.out.println("PUT: ");
         System.out.println("User data:" + userData);
+        return "Hello, " + userData;
     }
 
     // method 2

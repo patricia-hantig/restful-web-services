@@ -14,28 +14,31 @@ public class PostResource {
     // method 1
     @POST
     @Path("/simpleExample")
-    public void addUser(String userData) {
+    public String addUser(String userData) {
         System.out.println("POST(method 1): ");
         System.out.println("User data: " + userData);
+        return userData;
     }
 
     // method 2
     @POST
     @Path("/withFormParam")
-    public void addUser(@FormParam("id") String id, @FormParam("name") String name) {
+    public String addUser(@FormParam("id") String id, @FormParam("name") String name) {
         System.out.println("POST(method 2): ");
         System.out.println("Id: " + id);
         System.out.println("Name: " + name);
+        return "Hello, " + name + " with the id " + id;
     }
 
     // method 3
     @POST
     @Path("/withFormParamAndConsume")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public void postUser(@FormParam("id") String id, @FormParam("name") String name) {
+    public String postUser(@FormParam("id") String id, @FormParam("name") String name) {
         System.out.println("POST(method 3): ");
         System.out.println("Id: " + id);
         System.out.println("Name: " + name);
+        return "Hello, " + name + " with the id " + id;
     }
 
     // method 4
