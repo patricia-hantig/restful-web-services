@@ -104,6 +104,37 @@
       <version>1.1.0.Final</version>
     </dependency>
 
+    <!-- JSON dependencies -->
+
+    <!-- required dependency for MOXy -->
+    <dependency>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-moxy</artifactId>
+      <version>2.2</version>
+    </dependency>
+
+    <!-- required dependency for JSON-P -->
+    <dependency>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-json-processing</artifactId>
+      <version>2.2</version>
+    </dependency>
+
+    <!-- required dependency for Jackson -->
+    <dependency>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-json-jackson</artifactId>
+      <version>2.2</version>
+    </dependency>
+
+    <!-- required dependency for Jettison -->
+    <dependency>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-json-jettison</artifactId>
+      <version>2.2</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
